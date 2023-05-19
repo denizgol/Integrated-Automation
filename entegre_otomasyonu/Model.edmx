@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="entegre_otomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="kategori">
+          <Key>
+            <PropertyRef Name="k_id" />
+          </Key>
+          <Property Name="k_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="k_ürünadı" Type="nchar" MaxLength="50" />
+          <Property Name="k_marka" Type="nchar" MaxLength="50" />
+          <Property Name="k_ürünkategorisi" Type="nchar" MaxLength="50" />
+          <Property Name="k_montajtipi" Type="nchar" MaxLength="50" />
+          <Property Name="k_kılıf" Type="nchar" MaxLength="50" />
+          <Property Name="k_regülatörtipi" Type="nchar" MaxLength="50" />
+          <Property Name="k_çıkışakımı" Type="nchar" MaxLength="50" />
+          <Property Name="k_girişgerilimi" Type="nchar" MaxLength="50" />
+          <Property Name="k_çıkışgerilimi" Type="nchar" MaxLength="50" />
+          <Property Name="k_çalışmasıcaklığı" Type="nchar" MaxLength="50" />
+          <Property Name="k_rohs" Type="nchar" MaxLength="50" />
+          <Property Name="k_fiyat" Type="nchar" MaxLength="50" />
+          <Property Name="k_imagefile" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="entegre_otomasyonuModelStoreContainer">
+          <EntitySet Name="kategori" EntityType="Self.kategori" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="entegre_otomasyonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="kategori">
+          <Key>
+            <PropertyRef Name="k_id" />
+          </Key>
+          <Property Name="k_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="k_ürünadı" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_marka" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_ürünkategorisi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_montajtipi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_kılıf" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_regülatörtipi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_çıkışakımı" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_girişgerilimi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_çıkışgerilimi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_çalışmasıcaklığı" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_rohs" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_fiyat" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="k_imagefile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="entegre_otomasyonuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="kategori" EntityType="Self.kategori" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="entegre_otomasyonuModelStoreContainer" CdmEntityContainer="entegre_otomasyonuEntities">
+          <EntitySetMapping Name="kategori">
+            <EntityTypeMapping TypeName="entegre_otomasyonuModel.kategori">
+              <MappingFragment StoreEntitySet="kategori">
+                <ScalarProperty Name="k_id" ColumnName="k_id" />
+                <ScalarProperty Name="k_ürünadı" ColumnName="k_ürünadı" />
+                <ScalarProperty Name="k_marka" ColumnName="k_marka" />
+                <ScalarProperty Name="k_ürünkategorisi" ColumnName="k_ürünkategorisi" />
+                <ScalarProperty Name="k_montajtipi" ColumnName="k_montajtipi" />
+                <ScalarProperty Name="k_kılıf" ColumnName="k_kılıf" />
+                <ScalarProperty Name="k_regülatörtipi" ColumnName="k_regülatörtipi" />
+                <ScalarProperty Name="k_çıkışakımı" ColumnName="k_çıkışakımı" />
+                <ScalarProperty Name="k_girişgerilimi" ColumnName="k_girişgerilimi" />
+                <ScalarProperty Name="k_çıkışgerilimi" ColumnName="k_çıkışgerilimi" />
+                <ScalarProperty Name="k_çalışmasıcaklığı" ColumnName="k_çalışmasıcaklığı" />
+                <ScalarProperty Name="k_rohs" ColumnName="k_rohs" />
+                <ScalarProperty Name="k_fiyat" ColumnName="k_fiyat" />
+                <ScalarProperty Name="k_imagefile" ColumnName="k_imagefile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
