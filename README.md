@@ -1,0 +1,1 @@
+# entegre_otomasyonu
